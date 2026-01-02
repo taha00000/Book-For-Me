@@ -1,0 +1,62 @@
+ACE PADEL CLUB - Reference Data for Testing
+==========================================
+
+VENDOR INFORMATION:
+- Name: Ace Padel Club
+- Service Type: Padel
+- Address: DHA Phase 5, Karachi
+- Phone: +923001234567
+
+PRICING:
+- Base Price: Rs 7,500 per hour
+- Discount: 20% available
+- Discounted Price: Rs 6,000 per hour
+- Card Discount: Not available
+
+Time-Based Pricing Blocks:
+- Morning (9:00 AM - 11:00 AM): Rs 2,000/hour
+- Afternoon (11:00 AM - 7:00 PM): Rs 2,500/hour
+- Evening (7:00 PM - 3:00 AM): Rs 3,500/hour
+
+PAYMENT DETAILS:
+- Account Title: Ace Padel Club
+- Account Number: 00150900000721
+- IBAN: PK38ASCM0000150900000721
+- Bank Name: Askari Bank
+
+SLOT SCHEDULE:
+Time slots are generated hourly for 24 HOURS A DAY (00:00 to 23:00)
+
+BOOKED SLOTS (Only 7 slots booked):
+- 6:00 PM - 7:00 PM (18:00-19:00): BOOKED
+- 8:30 PM - 10:00 PM (20:30-22:00): BOOKED
+- 10:00 PM - 12:00 AM (22:00-00:00): BOOKED
+- 2:00 AM - 4:00 AM (02:00-04:00): BOOKED
+- 5:00 AM - 6:00 AM (05:00-06:00): BOOKED
+- 7:00 AM - 9:00 AM (07:00-09:00): BOOKED
+
+ALL OTHER SLOTS ARE AVAILABLE
+
+Example:
+- 5:00 PM - 6:00 PM: AVAILABLE (can book)
+- 5:00 PM - 5:30 PM: AVAILABLE (can book)
+- 5:00 PM - 6:30 PM: NOT AVAILABLE (conflicts with 6-7pm booked slot)
+- 6:00 PM - 7:00 PM: BOOKED (cannot book)
+
+STATUS CODES:
+- "available" - Slot is available for booking
+- "booked" - Slot is reserved and cannot be booked
+
+CONFLICT RULES:
+- If a slot is booked, you cannot book any time that overlaps with it
+- Example: If 6-7pm is booked, you CAN book 5-6pm but CANNOT book 5:30-6:30pm
+- The system checks for conflicts when booking partial hours
+
+TESTING NOTES:
+- Slots generated for next 14 days
+- Only 7 specific slots are booked (see above)
+- All other slots (24 hours) are AVAILABLE
+- Use this file to verify agent responses are correct
+- Test: "is 5pm available?" → YES (5-6pm is available)
+- Test: "book 5-6:30" → NO (conflicts with 6-7pm booked)
+
