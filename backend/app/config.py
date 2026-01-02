@@ -37,7 +37,7 @@ class Settings(BaseSettings):
     GOOGLE_APPLICATION_CREDENTIALS: Optional[str] = None
     
     # Authentication
-    JWT_SECRET_KEY: str = "your-secret-key-change-in-production"
+    JWT_SECRET_KEY: str = ""  # Must be set via environment variable
     
     # Logging
     LOG_LEVEL: str = "INFO"
